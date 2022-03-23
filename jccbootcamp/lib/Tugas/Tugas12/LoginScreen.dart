@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jccbootcamp/Tugas/Tugas13/main_page.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: Container(
           color: Color.fromARGB(236, 174, 255, 251),
@@ -75,7 +77,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 20,
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.popAndPushNamed(context, '/Main');
+                          },
                           child: Text(
                             'Login',
                             style: TextStyle(fontSize: 25),
