@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jccbootcamp/Tugas/Tugas13/Routes.dart';
-
-import 'Tugas/Tugas12/HomeScreen.dart';
-import 'Tugas/Tugas12/LoginScreen.dart';
-import 'Tugas/Tugas11/Telegram.dart';
+import 'package:jccbootcamp/Tugas/Tugas14/get_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: LoginScreen(),
+      home: GetDataScreen(),
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
