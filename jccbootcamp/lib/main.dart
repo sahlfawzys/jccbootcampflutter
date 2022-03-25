@@ -1,8 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:jccbootcamp/Tugas/Tugas13/Routes.dart';
-import 'package:jccbootcamp/Tugas/Tugas14/get_data.dart';
+import 'package:jccbootcamp/Tugas/Tugas15/login_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    // Replace with actual values
+    options: FirebaseOptions(
+      apiKey: "AIzaSyCFRoDW5BpLwg6rEY1UjOCdNL2LCFBZDLA",
+      appId: "1:107937244488:android:d22159b573417a70fbbf7d",
+      messagingSenderId: "project-107937244488",
+      projectId: "jcc-auth-b7853",
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -12,9 +23,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: GetDataScreen(),
+      home: LoginPage(),
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
