@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:jccbootcamp/Latihan/Latihan1/get_data_screen.dart';
 import 'package:jccbootcamp/Quiz3/screen/login/login_screen.dart';
 import 'package:jccbootcamp/Tugas/Tugas13/Routes.dart';
 import 'package:jccbootcamp/Tugas/Tugas15/login_page.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: LoginScreen(),
+      home: GetDataScreenStateManagement(),
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
