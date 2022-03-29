@@ -1,9 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:jccbootcamp/Latihan/Latihan1/get_data_screen.dart';
-import 'package:jccbootcamp/Quiz3/screen/login/login_screen.dart';
-import 'package:jccbootcamp/Tugas/Tugas13/Routes.dart';
-import 'package:jccbootcamp/Tugas/Tugas15/login_page.dart';
+import 'package:get/get.dart';
+import 'package:jccbootcamp/Latihan/Latihan2/pages/page_1.dart';
+import 'package:jccbootcamp/Latihan/Latihan2/routes/page_routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,12 +23,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: GetDataScreenStateManagement(),
-      onGenerateRoute: RouteGenerator.generateRoute,
+      home: PageOne(),
+      getPages: pageRouteApp.pages,
     );
   }
 }

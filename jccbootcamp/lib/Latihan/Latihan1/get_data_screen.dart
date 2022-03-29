@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jccbootcamp/Latihan/Latihan1/controller/appcontrolle.dart';
+import 'package:jccbootcamp/Latihan/Latihan1/controller/appcontroller.dart';
 
 class GetDataScreenStateManagement extends StatelessWidget {
   const GetDataScreenStateManagement({Key? key}) : super(key: key);
